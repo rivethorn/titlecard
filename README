@@ -18,5 +18,6 @@ Installation: (you'll need cargo)
   Option 1: cargo install titlecard
   (https://crates.io/crates/titlecard)
 
-  Option 2: git clone https://github.com/rivethorn/titlecard && cd titlecard && cargo install --path .
-
+  Option 2: git clone https://github.com/rivethorn/titlecard \
+            && cd titlecard \
+            && cargo install --path .
