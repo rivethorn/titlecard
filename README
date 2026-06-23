@@ -1,0 +1,22 @@
+TITLECARD
+=========
+
+A small utility to center your ASCII art in the terminal.
+
+Just pipe the ASCII into the app, for example:
+
+figlet "Yo Yo" | titlecard
+(https://github.com/cmatsuoka/figlet)
+
+or if you have more panache like me:
+
+toilet "Yo Yo" -f pagga | titlecard
+(https://github.com/cacalabs/toilet)
+
+Installation: (you'll need cargo)
+
+  Option 1: cargo install titlecard
+  (https://crates.io/crates/titlecard)
+
+  Option 2: git clone https://github.com/rivethorn/titlecard && cd titlecard && cargo install --path .
+
