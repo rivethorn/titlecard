@@ -1,5 +1,5 @@
 use std::{
-    io::{self, Read},
+    io::{self, Read, Write, stdout},
     thread,
     time::Duration,
 };
@@ -66,4 +66,6 @@ fn main() {
     thread::sleep(Duration::from_secs(5));
 
     print!("\x1b[2J");
+
+    stdout().flush().unwrap();
 }
