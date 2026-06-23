@@ -1,6 +1,6 @@
 [package]
 name = "titlecard"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 authors = ["Hassan Qasemi"]
 description = "A small utility to center ASCII art in the terminal"
