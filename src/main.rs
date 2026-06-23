@@ -5,22 +5,18 @@ use std::{
 };
 
 struct Winsize {
-    ws_row: u16,
-    ws_col: u16,
+    row: u16,
+    col: u16,
 }
 
 fn size() -> Option<(usize, usize)> {
     unsafe {
-        let mut ws = Winsize {
-            ws_row: 0,
-            ws_col: 0,
-        };
+        let mut ws = Winsize { row: 0, col: 0 };
 
         for fd in [libc::STDOUT_FILENO, libc::STDERR_FILENO, libc::STDIN_FILENO]
         {
-            if libc::ioctl(fd, libc::TIOCGWINSZ, &mut ws) == 0 && ws.ws_col != 0
-            {
-                return Some((ws.ws_row as usize, ws.ws_col as usize));
+            if libc::ioctl(fd, libc::TIOCGWINSZ, &mut ws) == 0 && ws.col != 0 {
+                return Some((ws.row as usize, ws.col as usize));
             }
         }
     }
